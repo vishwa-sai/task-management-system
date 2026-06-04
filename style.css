@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:650px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+h2{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    font-size:16px;
+}
+
+input::placeholder{
+    color:#d1d5db;
+}
+
+button{
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+button[onclick="addTask()"]{
+    width:100%;
+    background:#3b82f6;
+    color:white;
+    margin-top:10px;
+}
+
+button[onclick="logout()"]{
+    background:#ef4444;
+    color:white;
+    margin-bottom:15px;
+}
+
+ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,0.12);
+    padding:15px;
+    margin-bottom:12px;
+    border-radius:12px;
+    color:white;
+}
+
+li span{
+    flex:1;
+    font-size:16px;
+}
+
+li button{
+    background:#10b981;
+    color:white;
+}
+
+li button:last-child{
+    background:#dc2626;
+}
+
+input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
+
+a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+p{
+    color:white;
+    text-align:center;
+    margin-top:15px;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:20px;
+    }
+
+    li{
+        flex-wrap:wrap;
+    }
+
+    li button{
+        width:100%;
+    }
+
+    h2{
+        font-size:26px;
+    }
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #22c55e;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:#cbd5e1;
+    font-size:14px;
+}
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.top-bar h2{
+    margin:0;
+}
